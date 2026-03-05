@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nate Pham &ndash; A map of parks and scenic places I&rsquo;ve visited.">
+  <title>Places I&rsquo;ve Explored &ndash; Nate Pham</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/nate/" class="site-name">Nate Pham</a>
+      <a href="/">Home</a>
+      <a href="/nate/work/">Work</a>
+      <a href="/nate/projects.html">Projects</a>
+      <a href="/nate/homelab.html">Homelab</a>
+      <a href="/nate/education.html">Education</a>
+      <a href="/nate/hobbies.html" class="active">Hobbies</a>
+      <a href="/nate/resume.html">Resume</a>
+      <a href="/contact/">Contact</a>
+        <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="hero">
+      <h1>Places I&rsquo;ve Explored</h1>
+      <p class="intro">
+        A map of national parks, natural landmarks, and scenic places I&rsquo;ve visited.
+      </p>
+    </div>
+
+    <div class="container">
+      <hr>
+
+      <section>
+        <div style="margin-bottom: 1rem;">
+          <a href="/nate/nature/" class="btn-outline">&#8592; Back to Nature</a>
+        </div>
+        <div id="map"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      <a href="/">&#8592; Phamly.net</a>
+      &nbsp;&middot;&nbsp;
+      <a href="/nate/">Nate Pham</a>
+      &nbsp;&middot;&nbsp;
+      <a href="/nate/nature/">Nature</a>
+      &nbsp;&middot;&nbsp;
+      Places Explored
+    </p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WLs=" crossorigin=""></script>
+  <script src="/js/places-map.js"></script>
+  <script src="/js/theme.js" defer></script>
+</body>
+</html>

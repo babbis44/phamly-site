@@ -987,3 +987,178 @@ footer a:hover {
     height: 52px;
   }
 }
+
+
+/* =============================================================================
+   DARK MODE — OS preference + manual override via html[data-theme]
+   ============================================================================= */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent:      #3b82f6;
+    --accent-dark: #2563eb;
+    --text:        #f1f5f9;
+    --text-muted:  #94a3b8;
+    --bg:          #0f172a;
+    --bg-subtle:   #1e293b;
+    --border:      #334155;
+    --nav-bg:      #020617;
+    --nav-text:    #94a3b8;
+    --nav-active:  #f1f5f9;
+  }
+}
+
+html[data-theme="dark"] {
+  --accent:      #3b82f6;
+  --accent-dark: #2563eb;
+  --text:        #f1f5f9;
+  --text-muted:  #94a3b8;
+  --bg:          #0f172a;
+  --bg-subtle:   #1e293b;
+  --border:      #334155;
+  --nav-bg:      #020617;
+  --nav-text:    #94a3b8;
+  --nav-active:  #f1f5f9;
+}
+
+html[data-theme="light"] {
+  --accent:      #2563eb;
+  --accent-dark: #1d4ed8;
+  --text:        #1e293b;
+  --text-muted:  #64748b;
+  --bg:          #ffffff;
+  --bg-subtle:   #f8fafc;
+  --border:      #e2e8f0;
+  --nav-bg:      #0f172a;
+  --nav-text:    #94a3b8;
+  --nav-active:  #f8fafc;
+}
+
+/* ── Theme toggle button ─────────────────────────────────────────────────── */
+
+.theme-toggle {
+  background: var(--nav-bg);
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.65rem 0.75rem;
+  color: var(--nav-text);
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  position: sticky;
+  right: 0;
+  transition: color 0.15s, background 0.15s;
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+  line-height: 1;
+}
+
+.theme-toggle:hover {
+  color: var(--nav-active);
+}
+
+/* Toggle in site-header (root / family placeholder pages) */
+.site-header .theme-toggle {
+  position: static;
+  background: transparent;
+  border-left: none;
+  margin-left: auto;
+  color: var(--text-muted);
+  padding: 0.4rem 0.5rem;
+}
+
+.site-header .theme-toggle:hover {
+  color: var(--text);
+}
+
+/* ── Family hub ──────────────────────────────────────────────────────────── */
+
+.family-photo {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.family-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.9rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.family-card {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.35rem 1.25rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.family-card-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 0.35rem;
+}
+
+.family-card-desc {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  flex: 1;
+  margin: 0 0 1rem;
+  line-height: 1.45;
+}
+
+.family-card-link {
+  display: inline-flex;
+  padding: 0.45rem 0.9rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+  align-self: flex-start;
+}
+
+.family-card-link:hover {
+  background: var(--accent-dark);
+}
+
+/* ── Progress bar ────────────────────────────────────────────────────────── */
+
+.progress-wrap {
+  background: var(--border);
+  border-radius: 100px;
+  height: 8px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0.5rem 0 0.35rem;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 100px;
+  background: var(--accent);
+}
+
+/* ── Leaflet map ─────────────────────────────────────────────────────────── */
+
+#map {
+  height: 520px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  #map { height: 420px; }
+  .family-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+}
