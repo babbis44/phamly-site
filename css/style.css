@@ -125,6 +125,8 @@ nav .site-name:hover {
 .site-header .inner {
   max-width: var(--max-width);
   margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 .site-header a {
@@ -1127,8 +1129,13 @@ html[data-theme="light"] {
   align-self: flex-start;
 }
 
+.family-card-link:visited {
+  color: #fff;
+}
+
 .family-card-link:hover {
   background: var(--accent-dark);
+  color: #fff;
 }
 
 /* ── Progress bar ────────────────────────────────────────────────────────── */
