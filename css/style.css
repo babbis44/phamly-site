@@ -1206,6 +1206,74 @@ html[data-theme="light"] {
   border-radius: 999px;
 }
 
+/* ── Nature Map ─────────────────────────────────────────────────────────── */
+
+.map-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+}
+
+.map-filter {
+  border: 1px solid var(--border);
+  background: var(--bg-subtle);
+  color: var(--text);
+  border-radius: 100px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.map-filter:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.map-filter.active {
+  background: var(--pill-bg);
+  color: var(--pill-text);
+  border-color: rgba(37, 99, 235, 0.35);
+}
+
+.map-meter {
+  width: 2.15rem;
+  height: 0.24rem;
+  border-radius: 999px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.map-meter-fill {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--accent);
+}
+
+.map-shell {
+  padding: 0.65rem;
+}
+
+#nature-map {
+  width: 100%;
+  min-height: 60vh;
+  height: 70vh;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.map-status {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
 .family-photo {
   display: block;
   width: 100%;
@@ -1297,5 +1365,9 @@ html[data-theme="light"] {
 
 @media (max-width: 640px) {
   #map { height: 420px; }
+  #nature-map {
+    min-height: 50vh;
+    height: 60vh;
+  }
   .family-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
 }

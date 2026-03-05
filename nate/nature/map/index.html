@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Nate Pham – Map of explored places.">
   <title>Places I&rsquo;ve Explored &ndash; Nate Pham</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -32,10 +33,32 @@
 
     <div class="container">
       <hr>
+
       <section>
-        <div class="card">
-          <p>Interactive map coming soon.</p>
+        <h2>Interactive Map</h2>
+
+        <div class="map-filters" role="toolbar" aria-label="Map filters">
+          <button type="button" class="map-filter active" data-map-filter data-filter="all" aria-pressed="true">
+            <span class="label">All</span>
+          </button>
+          <button type="button" class="map-filter" data-map-filter data-filter="park" aria-pressed="false">
+            <span class="label">National Parks</span>
+            <span class="map-meter" aria-hidden="true"><span class="map-meter-fill"></span></span>
+          </button>
+          <button type="button" class="map-filter" data-map-filter data-filter="landmark" aria-pressed="false">
+            <span class="label">Landmarks</span>
+          </button>
+          <button type="button" class="map-filter" data-map-filter data-filter="scenic" aria-pressed="false">
+            <span class="label">Scenic Places</span>
+          </button>
         </div>
+
+        <div class="card map-shell">
+          <div id="nature-map" aria-label="Map of explored places"></div>
+        </div>
+
+        <p id="map-status" class="map-status" aria-live="polite"></p>
+
         <p style="margin-top: 1rem;"><a href="/nate/nature/" class="btn-outline">&larr; Back to Nature</a></p>
       </section>
     </div>
@@ -45,6 +68,8 @@
     <p><a href="/">&#8592; Phamly.net</a> &nbsp;&middot;&nbsp; <a href="/nate/">Nate Pham</a> &nbsp;&middot;&nbsp; Nature</p>
   </footer>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="/js/nature-map.js" defer></script>
   <script src="/js/theme.js" defer></script>
 </body>
 </html>
