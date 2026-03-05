@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nathan Pham – Homelab infrastructure running Proxmox, pfSense, VyOS, Ubuntu Server, and Zabbix for networking and virtualization practice.">
+  <title>Homelab &ndash; Nate Pham</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="./" class="site-name">Nate Pham</a>
+      <a href="./">Home</a>
+      <a href="education.html">Education</a>
+      <a href="work/">Work</a>
+      <a href="projects.html">Projects</a>
+      <a href="homelab.html" class="active">Homelab</a>
+      <a href="hobbies.html">Hobbies</a>
+      <a href="resume.html">Resume</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="hero">
+      <h1>Homelab Infrastructure</h1>
+      <p class="intro">
+        My homelab is where I practice networking, infrastructure deployment, and monitoring
+        in a safe environment. I use it to reinforce networking concepts, experiment with
+        virtualization, and train toward certifications like the CCNA.
+      </p>
+    </div>
+
+    <div class="container">
+      <hr>
+
+      <!-- ── Infrastructure Stack ───────────────────────────── -->
+      <section>
+        <h2>Infrastructure Stack</h2>
+
+        <div class="card">
+          <div class="meta">Hypervisor</div>
+          <h3>Proxmox VE</h3>
+          <p>
+            Primary virtualization platform hosting virtual machines and LXC containers.
+            Used to run the full lab stack and isolate networking environments.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="meta">Firewall</div>
+          <h3>pfSense</h3>
+          <p>
+            Deployed as the lab firewall. Handles VLAN routing, firewall rules, DHCP,
+            and DNS forwarding between lab network segments.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="meta">Routing Lab</div>
+          <h3>VyOS</h3>
+          <p>
+            Used as a software router for practicing routing protocols, static routes,
+            and dynamic routing configurations in a controlled lab environment.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="meta">Server</div>
+          <h3>Ubuntu Server</h3>
+          <p>
+            Linux server VMs used for deploying self-hosted services, running automation
+            scripts, and practicing Linux administration tasks.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="meta">Monitoring</div>
+          <h3>Zabbix</h3>
+          <p>
+            Network and host monitoring platform used to track uptime, resource usage,
+            and service availability across the homelab environment.
+          </p>
+        </div>
+
+      </section>
+
+      <!-- ── Lab Uses ────────────────────────────────────────── -->
+      <section>
+        <h2>Lab Uses</h2>
+        <ul class="bullet-list">
+          <li>Practice routing and switching concepts in preparation for the CCNA.</li>
+          <li>Experiment with VLAN segmentation and inter-VLAN routing configurations.</li>
+          <li>Deploy and monitor Linux servers to reinforce system administration skills.</li>
+          <li>Run small self-hosted services to learn deployment, maintenance, and troubleshooting.</li>
+          <li>Host test environments for automation scripts and networking lab exercises.</li>
+        </ul>
+      </section>
+
+      <!-- ── Note ───────────────────────────────────────────── -->
+      <section>
+        <h2>Note</h2>
+        <div class="card">
+          <h3>Security &amp; Privacy</h3>
+          <p>
+            Specific internal network configurations, IP addressing schemes, and infrastructure
+            details are intentionally not published here for security reasons.
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p><a href="/">&#8592; Phamly.net</a> &nbsp;&middot;&nbsp; Nathan Pham</p>
+  </footer>
+
+</body>
+</html>
